@@ -1,0 +1,35 @@
+{
+    "parser": "@babel/eslint-parser",
+    "extends": [
+        "universe",
+        "plugin:react-hooks/recommended",
+        "plugin:react/recommended",
+        "prettier"
+    ],
+    "plugins": ["@babel", "react"],
+    "rules": {
+        "import/order": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/prop-types": "off"
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "env": {
+        "es2021": true,
+        "node": true
+    },
+    "parserOptions": {
+        "requireConfigFile": false,
+        "babelOptions": {
+            "presets": ["@babel/preset-env", "@babel/preset-react"]
+        },
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    }
+}
